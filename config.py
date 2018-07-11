@@ -1,2 +1,2 @@
-APPNAME='defaultapplicationname'
+APPNAME='appname'
 ENVIRONMENT='development'
