@@ -49,12 +49,12 @@ class Config:
   SQLALCHEMY_COMMIT_ON_TEARDOWN = True
   SQLALCHEMY_TRACK_MODIFICATIONS = False
   # deliver libraries
-  LCDN_PATH = os.path.join(config_path(),'/lcdn/static')
-  LCDN_ALLOWED = {
-    'css':  'text/css',
-    'js': 'application/javascript'
-  }
-  LCDN_SRC = config_lcdn('remote')
+  #LCDN_PATH = os.path.join(config_path(),'/lcdn/static')
+  #LCDN_ALLOWED = {
+  #  'css':  'text/css',
+  #  'js': 'application/javascript'
+  #}
+  #LCDN_SRC = config_lcdn('remote')
   # form support
   SECRET_KEY = ''
   # unicode on
@@ -62,6 +62,7 @@ class Config:
   # debugging off
   DEBUG = False
   TESTING = False
+  PRINT_ENV = False
  
 # config modifications
 class LiveConfig(Config):
@@ -70,12 +71,14 @@ class LiveConfig(Config):
 class DevConfig(Config):
   DEBUG = True
   TESTING = True
+  PRINT_ENV = True
 
 class LocalConfig(Config):
   DEBUG = True
   TESTING = True
+  PRINT_ENV = True
   #LCDN_SRC = config_lcdn('local')
-  LCDN_SRC = config_lcdn('remote')
+  #LCDN_SRC = config_lcdn('remote')
 
 configs = {
   "live":         "env.LiveConfig",

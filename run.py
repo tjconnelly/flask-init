@@ -13,6 +13,9 @@ from appname import initialize,db
 app = initialize(os.getenv('FLASK_CONFIG') or 'local')
 import appname.context
 
+if app.config['PRINT_ENV']:
+  print(' * Config: {0}'.format(app.config['ENVIRONMENT']))
+
 ### {{{ shell commands
 import click
 @app.cli.command()
