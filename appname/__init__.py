@@ -25,7 +25,7 @@ class ExtendedJSONEncoder(JSONEncoder):
 
 ###
 # app setup
-from env import configs,config_env
+from config import configs,config_env
 
 # helper modules
 #bootstrap = Bootstrap()
