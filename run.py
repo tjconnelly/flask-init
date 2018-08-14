@@ -7,11 +7,11 @@ directory = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0,directory)
 ###
 # run that baby
-from appname import initialize,db
-#from appname.models import *
+from www import initialize,db
+#from www.models import *
 
 app = initialize(os.getenv('FLASK_CONFIG') or 'local')
-import appname.context
+import www.context
 
 if app.config['PRINT_ENV']:
   print(' * Config: {0}'.format(app.config['ENVIRONMENT']))

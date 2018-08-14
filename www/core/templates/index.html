@@ -1,0 +1,26 @@
+{%- extends "bootstrap/base.html" -%}
+{%- block head -%}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ super() }}
+{%- endblock head -%}
+{% block title %}{{ envid }}{% endblock title %}
+{%- block styles -%}
+{{ super() }}
+{% endblock styles %} 
+{% block body %}
+<div class="loader"></div>
+<div class="container">
+  <script type="text/javascript">
+    var envid = "{{ envid }}";
+  </script>
+  <div id="main"></div>
+  </div>
+</div>
+{% block scripts %}
+<script src="{{ url_for('static',filename='bundle.js') }}"></script>
+{{ super() }}
+{% endblock scripts %}
+{% block modals %}{% endblock modals %}
+{% endblock body %}

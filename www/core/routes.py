@@ -1,5 +1,5 @@
 from . import core
-from appname import context
+from www import context
 
 #from flask import current_app as app
 from flask import g,request,render_template,url_for,jsonify
