@@ -1,4 +1,4 @@
-from www import db
+from server import db
 
 from flask import current_app as app
 from flask import g

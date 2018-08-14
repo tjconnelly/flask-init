@@ -8,5 +8,5 @@ import os
 directory = os.path.dirname(os.path.realpath(__file__))
 sys.path.insert(0,directory)
 
-from www import initialize
+from server import initialize
 application = initialize()

@@ -1,2 +1,2 @@
-APPNAME='www'
+APPNAME='server'
 ENVIRONMENT='development'
