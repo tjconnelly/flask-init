@@ -16,12 +16,12 @@ import server.context
 if app.config['PRINT_ENV']:
   print(' * Config: {0}'.format(app.config['ENVIRONMENT']))
 
-### {{{ shell commands
+# {{{ shell commands
 import click
+
 @app.cli.command()
 @click.argument('target',required=False)
-def ping(target):
-  print('pong!')
-  if target is not None:
-    print('with love from {0}'.format(target))
-### }}}
+def argtest(target):
+  tv = target if target is not None else 'None'
+  print("my 'target' argument is: {0}".format(tv))
+# }}}
