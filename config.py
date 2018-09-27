@@ -25,7 +25,6 @@ def config_database(env=None):
   return connection;
 
 def config_sqlalchemy(cxn):
-  #uri = 'mysql+pymysql://'+cxn['user']+':'+cxn['passwd']+'@'+cxn['host']+'/'+cxn['db']
   uri = 'mysql+pymysql://{user}:{passwd}@{host}/{db}'.format(**cxn)
   return uri
 
